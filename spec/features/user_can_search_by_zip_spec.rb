@@ -11,11 +11,11 @@ describe 'user visits /' do
     expect(current_path).to eq('/search')
 
     expect(page).to have_css(".station", count: 10)
-    
+
     within(first(".station")) do
       expect(page).to have_css(".name")
       expect(page).to have_css(".address")
-      expect(page).to have_css(".fuel-types")
+      expect(page).to have_css(".fuel-type")
       expect(page).to have_css(".distance")
       expect(page).to have_css(".access-times")
     end
