@@ -12,8 +12,10 @@ class Presenter
 
     json = JSON.parse(response.body, symbolize_names: true)
 
-    json[:fuel_stations].map do |station_info|
+    stations = json[:fuel_stations].map do |station_info|
       Station.new(station_info)
     end
+
+    stations.sort_by {|station| station.distance }.shift(10)
   end
 end
