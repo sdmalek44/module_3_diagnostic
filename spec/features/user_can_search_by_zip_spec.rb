@@ -11,7 +11,7 @@ describe 'user visits /' do
     expect(current_path).to eq('/search')
 
     expect(page).to have_css(".station", count: 10)
-
+    
     within(first(".station")) do
       expect(page).to have_css(".name")
       expect(page).to have_css(".address")
