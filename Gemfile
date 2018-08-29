@@ -15,6 +15,9 @@ gem 'figaro'
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
+  gem 'pry'
 end
 
 group :development do
@@ -23,8 +26,5 @@ group :development do
 end
 
 group :test do
-  gem 'vcr'
-  gem 'webmock'
   gem 'capybara'
 end
-
