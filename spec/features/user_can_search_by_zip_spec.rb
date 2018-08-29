@@ -4,7 +4,7 @@ describe 'user visits /' do
   it 'can search by zip code' do
     visit '/'
 
-    fill_in :zip, with: '80203'
+    fill_in :q, with: '80203'
 
     click_on 'Locate'
 
